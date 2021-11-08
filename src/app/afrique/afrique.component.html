@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Liste de tous les pays Africains</h1>
+    <div class="display">
+        <ng-container *ngFor="let pays of data" >
+            <div *ngIf="pays.continents == 'Africa'">
+                <mat-card class="example-card card">
+                    <mat-card-header>
+                        <mat-card-title>{{pays.name.common}}</mat-card-title>
+                        <mat-card-subtitle>{{pays.continents}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src={{pays.flags.svg}} alt="Photo of country" class="img">
+                    <mat-card-content>
+                        <p>
+                            La capitale du {{pays.translations.fra.common}} est {{pays.capital}}
+                            <br>
+                            Son nombre d'habitant est de {{pays.population}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.card{
+    margin-bottom: 5%;
+    max-width: 33vh;
+}
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
